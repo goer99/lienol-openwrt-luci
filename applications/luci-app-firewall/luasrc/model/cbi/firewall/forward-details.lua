@@ -152,8 +152,8 @@ o.default = o.enabled
 
 o = s:option(ListValue, "reflection_src", translate("Loopback source IP"), translate("Specifies whether to use the external or the internal IP address for reflected traffic."))
 o:depends("reflection", "1")
-o:value("internal", "Use internal IP address")
-o:value("external", "Use external IP address")
+o:value("internal", translate("Use internal IP address"))
+o:value("external", translate("Use external IP address"))
 function o.write(self, section, value)
 	if value ~= 'internal' then
 		m:set(section, "reflection_src", value)
